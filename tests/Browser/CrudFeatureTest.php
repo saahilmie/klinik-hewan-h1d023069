@@ -76,7 +76,7 @@ class CrudFeatureTest extends DuskTestCase
      */
     public function testUserCanReadData()
     {
-        // Buat data
+        // Buat data dummy
         Pasien::create([
             'nama_hewan' => 'Milo',
             'jenis_hewan' => 'Kucing',
@@ -105,7 +105,7 @@ class CrudFeatureTest extends DuskTestCase
      */
     public function testUserCanUpdateData()
     {
-        // Buat data
+        // Buat data dummy
         $pasien = Pasien::create([
             'nama_hewan' => 'Luna',
             'jenis_hewan' => 'Kucing',
@@ -146,7 +146,7 @@ class CrudFeatureTest extends DuskTestCase
      */
     public function testUserCanDeleteData()
     {
-        // Buat data
+        // Buat data dummy
         $pasien = Pasien::create([
             'nama_hewan' => 'Charlie',
             'jenis_hewan' => 'Hamster',

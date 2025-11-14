@@ -212,9 +212,26 @@
             }
         });
 
+        // Logic untuk show/hide jenis hewan lainnya
+        document.getElementById('jenis_hewan').addEventListener('change', function() {
+            const jenisHewan = this.value;
+            const lainnyaContainer = document.getElementById('jenis_lainnya_container');
+            const lainnyaInput = document.getElementById('jenis_hewan_lainnya');
+
+            if (jenisHewan === 'Lainnya') {
+                lainnyaContainer.style.display = 'block';
+                lainnyaInput.required = true;
+            } else {
+                lainnyaContainer.style.display = 'none';
+                lainnyaInput.required = false;
+                lainnyaInput.value = '';
+            }
+        });
+
         // Trigger saat halaman load
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('status').dispatchEvent(new Event('change'));
+            document.getElementById('jenis_hewan').dispatchEvent(new Event('change'));
         });
     </script>
 </x-app-layout>

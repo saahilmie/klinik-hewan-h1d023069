@@ -82,13 +82,15 @@
                                 <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
                                     <div class="flex justify-center gap-2">
                                         <a href="{{ route('pasien.edit', $p->id) }}"
-                                           class="text-cyan-600 hover:text-cyan-900 font-semibold">
+                                        dusk="edit-{{ $p->id }}"
+                                        class="text-cyan-600 hover:text-cyan-900 font-semibold">
                                             Edit
                                         </a>
                                         <form action="{{ route('pasien.destroy', $p->id) }}" method="POST" class="inline">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit"
+                                                    dusk="delete-{{ $p->id }}"
                                                     onclick="return confirm('Yakin ingin menghapus data ini?')"
                                                     class="text-red-600 hover:text-red-900 font-semibold">
                                                 Hapus
